@@ -16,7 +16,7 @@
 
       section {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 10px;
       }
       article {
@@ -44,6 +44,7 @@
         <h2 class="navn"></h2>
         <img src="" alt="" class="billede"/>
         <p class="fødselsdag"></p>
+        <p class="hobby"></p>
       </article>
     </template>
     <script>
@@ -78,7 +79,7 @@
             klon.querySelector(".navn").textContent = person.fornavn + " " + person.efternavn;
             klon.querySelector(".billede").src = "faces/" + person.billede;
             klon.querySelector(".fødselsdag").textContent = `Født: ${person.fødselsdag}`;
-
+            klon.querySelector(".hobby").textContent = `Hobby: ${person.hobby}`;
             container.appendChild(klon);
             
           });
